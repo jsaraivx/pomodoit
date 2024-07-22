@@ -12,14 +12,15 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Counter from "@/components/Counter";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center px-6 py-12 bg-gradient-to-tr from-purple-900 to-red-700 ">
       <h1 className="scroll-m-20 text-white text-4xl font-extrabold tracking-tight lg:text-5x ">
-        Bem-vindo ao Pomo<b className='text-black text-4xl' >do</b>it
+        Bem-vindo ao Pomo<b className="text-black text-4xl">do</b>it
       </h1>
-      <Card className="mt-12 min-w-60 ">
+      <Card className="mt-12 select-none min-w-60 ">
         <CardHeader>
           <CardTitle></CardTitle>
           <CardDescription></CardDescription>
@@ -44,18 +45,16 @@ export default function Home() {
             </Button>
           </div>
         </CardHeader>
-        <CardContent className='select-none  '>
+        <CardContent className="select-none  ">
           <section className="flex flex-col">
-            <h1 className=" scroll-m-20 self-center text-7xl font-extrabold tracking-tight lg:text-9xl mb-8">
-              25min
-            </h1>
+            <Counter/>
             <Button className="bg-gradient-to-tr from-purple-900 to-red-700">
               Iniciar
             </Button>
           </section>
         </CardContent>
-        <CardFooter className='justify-between items-center' >
-          <p  >By Saraivx</p>
+        <CardFooter className="justify-between items-center">
+          <p>By Saraivx</p>
           <Avatar>
             <AvatarImage src="https://github.com/jsaraivx.png" />
             <AvatarFallback>CN</AvatarFallback>
@@ -64,5 +63,4 @@ export default function Home() {
       </Card>
     </main>
   );
-  
 }
